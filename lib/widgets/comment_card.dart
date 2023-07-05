@@ -41,9 +41,7 @@ class CommentCard extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 4),
                     child: Text(
-                      DateFormat.yMMMd().format(
-                        snap.data()['datePublished'].toDate(),
-                      ),
+                        snap.data()['datePublished'].toDate().toString(),
                       style: const TextStyle(
                           fontSize: 12, fontWeight: FontWeight.w400,),
                     ),

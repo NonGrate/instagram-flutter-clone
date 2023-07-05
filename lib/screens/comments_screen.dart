@@ -97,7 +97,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
                   child: TextField(
                     controller: commentEditingController,
                     decoration: InputDecoration(
-                      hintText: 'Comment as ${user.username}',
+                      hintText: 'comment as ${user.username}',
                       border: InputBorder.none,
                     ),
                   ),
