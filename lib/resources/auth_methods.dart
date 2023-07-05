@@ -34,12 +34,15 @@ class AuthMethods {
           username.isNotEmpty ||
           bio.isNotEmpty ||
           file != null) {
+
+        print("Creating a user");
         // registering user in auth with email and password
         UserCredential cred = await _auth.createUserWithEmailAndPassword(
           email: email,
           password: password,
         );
 
+        print("Uploading a photo");
         String photoUrl =
             await StorageMethods().uploadImageToStorage('profilePics', file, false);
 
@@ -53,6 +56,7 @@ class AuthMethods {
           following: [],
         );
 
+        print("Uploading a user data");
         // adding user in our database
         await _firestore
             .collection("users")
